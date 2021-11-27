@@ -1,0 +1,39 @@
+﻿*{
+    margin:0px;
+   padding:0px;
+    margin:0 auto;/*centra el contenedor principal*/
+}
+
+body {
+ background-color:wheat;
+ font-size:0.9rem;
+ text-align:center;
+ margin:0 auto;
+}
+.class_Hoteles {
+    width:80%;
+    background-color:azure;
+    padding:10px;
+   margin-top:10px;
+}
+#tabla_Hotel {
+    text-align:left;
+    width:99%;
+    background-color:orange;
+    border-radius: 10px 10px 0px 0px;
+    border-bottom-style:double;
+    border-width: 5px;
+   
+    border-color:orange;
+    height:240px;
+    
+}
+#tabla_Hotel td:first-child{
+width:50%;
+background-color:white;
+vertical-align:top;
+padding:10px;
+}
+.les {
+    text-align:left;
+}

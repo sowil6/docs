@@ -1,0 +1,29 @@
+﻿b/*ody {
+}
+  #bodybajo #columIzq {
+	float: left;
+	width: 1%;
+    background-color:#808080;
+    box-shadow: 0px 0px 10px #000  inset; 
+	min-height: 550px;
+    display:inline-block;
+    vertical-align:top;  
+    border-radius: 10px 0px 0px 0px;
+}
+ #bodybajo #MasterColumCentro {
+    float:left;
+   width: 98%;
+    background-color: white;
+    box-shadow: 0px 0px 10px #000;
+    height: 530px;
+    overflow: scroll;
+    vertical-align:top;
+}
+ #bodybajo #MasterColumDerecha {
+     overflow-y:scroll;
+ float:right;
+ right:0;
+ width: 1%;
+background-color:yellowgreen;
+height:800px;
+*/

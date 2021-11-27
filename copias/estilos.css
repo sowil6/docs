@@ -1,0 +1,765 @@
+﻿*{margin:0px;
+   padding:0px;
+}
+body {    
+  text-align: center;
+  /*background-image:url("/img/fondo2.JPG");*/
+   background-position-y:118px;
+ 
+}
+
+#cuerpoprincipal {
+   width:100%; 
+    margin:0 auto; /*centra el contenedor principal*/
+    margin-right:auto;
+    margin-left:auto;
+  }
+header {
+    height:auto;
+    width: 100%; /* hacemos que la cabecera ocupe el ancho completo de la página */
+	background-color: rgba(255, 255, 255, 0.95);
+	/*color: #FFFF00;*/
+	
+    border-radius: 0px 0px 10px 10px;
+    box-shadow: 0px 0px 10px #000 inset;
+	/*text-align: center;*/
+    position:fixed;
+    top: 0; /* Posicionamos la cabecera pegada arriba */
+}
+.CarruselContent-allMain{
+     width: 95px;
+    margin: auto;
+    perspective: 800px;
+    /*position:absolute;*/
+    margin-right: 250px;
+    margin-top:-75px;
+    float:right;
+       
+}
+#barraHorizontal {
+    width:100%;
+    height: 28px;
+    /*background-color: #808080;*/
+    border-radius: 0px 0px 10px 10px;
+    box-shadow: 0px 0px 10px #000  inset;
+    margin:0 auto;/*centra el contenedor principal*/
+    }
+#barraHorizontal > ul {
+	margin-top: 0;/*pega el div a la cabecera, quita el espacio que quedaba*/
+	text-align: center;/*alinea a la izquierda los botones de la barra de herramienta*/
+    display: inline-block;
+}
+#barraHorizontal > #menuDigitador {
+	margin-top: 0;/*pega el div a la cabecera, quita el espacio que quedaba*/
+	text-align: center;/*alinea a la izquierda los botones de la barra de herramienta*/
+    
+}
+#barraHorizontal > #menuComite {
+	margin-top: 0;/*pega el div a la cabecera, quita el espacio que quedaba*/
+	text-align: center;/*alinea a la izquierda los botones de la barra de herramienta*/
+
+}
+#barraHorizontal > #menuAdmin {
+	margin-top: 0;/*pega el div a la cabecera, quita el espacio que quedaba*/
+	text-align: center;/*alinea a la izquierda los botones de la barra de herramienta*/
+  
+}
+#barraHorizontal li {
+	display: inline-block;
+	padding: 2px;/*ubicacion de los botones dentro de la barra de herrameinta*/
+	cursor: pointer;
+	background-color: #3e9b19;/*colos de los botones barra de herramienta*/
+	color: burlywood;
+    box-shadow: 0px 0px 10px #000 inset;
+}
+#barraHorizontal li > a {
+	display: block;
+	color: white;/*color de fuente botones*/
+	text-decoration: none;/*qita subrayado botones*/
+	/*font-weight: bold;*//*negrita font botones*/
+}
+#titulo {
+  	width: 80%;
+    text-align:left;
+    margin-left:150px;
+}
+
+.SpanTitulo1 {
+    /*margin-top: -10px;*//*pega el div a la cabecera, quita el espacio que quedaba*/
+width: 50%;
+color: red;
+padding: 0px;
+font: 200% Benguiat Bk Bt;
+text-decoration-line:underline;
+text-decoration-color:yellow;
+/*text-align: left;*/ 
+/*margin-left:140px;*/
+    }
+ #titulo .SpanTitulo2 {
+    margin-top: -10px;/*pega el div a la cabecera, quita el espacio que quedaba*/
+    width: 70%;
+	 color: forestgreen;
+	padding: 0px;
+    font: 200% Benguiat Bk Bt;
+text-decoration-line:underline;
+text-decoration-color:yellow;
+    }
+#titulo > .SpanSubtitulo1 {
+    color: #000;
+	position: relative;
+    top:-5px;
+    font: 50% sans-serif;
+    text-align: left;  
+ 
+}
+#titulo > .SpanSubtitulo2 {
+    color: #000;
+	position: relative;
+    top:-5px;
+    font: 90% sans-serif;
+    text-align: left;
+}
+#logotipo {
+   position: absolute;
+    left:40px;/*ubica el logo a la izqueirda de la pantalla*/
+    top:5px;/*ubica el logo en la parte superior de la pantalla*/
+}
+#logotipo > a > img {
+	width:100px;
+	height: 80px;
+}
+#gestion {
+   position: absolute;
+   right:40px;/*ubica el logo a la izqueirda de la pantalla*/
+    top:1px;/*ubica el logo en la parte superior de la pantalla*/
+}
+#loginDisplay {
+    width: auto;
+    top: 10px;
+    position: absolute;
+    right: 10%;
+    color: #000000;
+}
+#logoutDisplay {
+    margin-top:0;/*pega el div a la cabecera, quita el espacio que quedaba*/
+   text-align: center;
+   display:inline-block;
+   float:right;
+   margin-right:5px;
+}
+#bodybajo {
+ padding-top:122px;
+ height:auto;
+ width:80%;
+ margin:0 auto;/*centra el contenedor principal*/
+}
+#bodybajo #columIzq {
+	float: left;
+    position:fixed;
+	width: 17%;
+  	min-height: 550px;
+}
+#columIzq .ContenidoMenuContextual {
+width:100%;
+}
+#bodybajo #columCentro {
+    float:right; 
+    width:79%;
+    min-height: 550px;
+    box-shadow:  0px 0px 10px #ff0000   inset;
+    border-radius: 00px 10px 0px 0px;
+ }
+#columCentro .MainContent {
+width:100%;
+
+}
+#notaRapidaPageAnidada {
+   margin:0 auto; /*centra el contenedor principal*/
+    width:auto;
+   font-size:12px;
+  text-align:justify;
+overflow:scroll;
+height:500px;
+}
+#notaRapidaPageAnidada> p {
+    font-size:18px;
+    text-align:center;
+    color:blue;
+    }
+#notaRapidaPageAnidada img {
+    width:91%;
+    border: 1px solid ActiveBorder;
+}
+#notaRapidaPageAnidada #Repeater1 {
+    border-bottom:solid 1px;
+}
+#tablaRepeaterAnidada {
+    width:95%;
+    margin-left:5px;
+      border: 1px solid ActiveBorder;
+  background-color:white;
+  padding:3px;
+}
+
+#tablaRepeater {
+  border: 1px solid ActiveBorder;
+  background-color:white;
+  padding:3px;
+}
+
+#menuContextual {
+	list-style-type: none;
+	padding: 0;
+	min-height: 500px;
+	margin: 30px 0;
+}
+#menuContextual > li {
+	padding: 10px;
+	text-align: center;/*centra texto en los botones laterales*/
+	/*background-color: #ff0000;*/
+	border: 1px outset blanchedalmond;
+	box-shadow: 0px 0px 10px #000 inset;/*sobra de los botones del menu laterales*/
+	border-radius: 10px 10px 10px 10px;
+}
+#menuContextual > li > a {
+	text-decoration: none;
+	color: white;
+}
+#muestrapdfPaginaInicio > embed {
+width:99%;
+height: 480px;
+margin-left:1px;
+margin-right:1px;
+}
+
+#divPrincipalLogistica {
+width:100%;
+background-color:#edf8f7;
+}
+#LogisticaColumnaIzq {
+  margin:0 auto; /*centra el contenedor principal*/
+  width:72%;
+   background-color:#edf8f7;
+  font-size:14px;
+  text-align:justify;
+  float:left;
+  height:auto;
+  margin-left:5px;
+}
+#LogisticaColumnaIzq img {
+    width:99%;
+    height:90%;
+    }
+#LogisticaColumnaIzq #Repeater2 img {
+   border: 1px solid red;
+       vertical-align:central ;
+         }
+#LogisticaColumnaDer {
+    width:auto;
+    height:auto;
+     /*text-align:start;*/
+   text-align:justify;
+   /*margin-top:0;*/
+ overflow: scroll;
+ /*float:right;*/ 
+ /*position:fixed;*/
+  right:7px;
+}
+
+/*Pagina Catalogo*/
+#divCatalogo {
+ zoom: 1;
+ 	max-width: 69em;
+	margin: 0 auto;
+   }
+
+#tablaCatalogo{
+  /*width:100%;*/
+  /*height:300px;*/
+  border: 1px solid ActiveBorder;
+  /*vertical-align:text-top;*/
+  }
+
+#tablaCatalogo td{
+/*border-collapse:collapse;*/
+border: green 1px solid;
+
+}
+
+
+#tablaCatalogo #imgCatalogo{
+width:100%;
+height:180px;
+/*border: 1px solid ActiveBorder;*/
+    /*word-wrap: break-word;*/
+}
+#tablaCatalogo #mensajeCatalogo{
+color:red;
+/*word-wrap: break-word;*/
+/*width:100%;*/
+text-align:justify;
+}
+.hidebr br{
+display:none; 
+}
+.tdContainer {
+width:25%;
+float:left;
+/*height:35px;*/
+}
+
+/*pagina Getfirma*/
+
+
+#tablaConsultas {
+width:100%;
+
+}
+#tablaConsultas td:first-child{
+width:50%;
+
+}
+#divIngresaCedula {
+/*float:left;*/
+width:100%;
+background-color:lightblue;
+}
+#divConsultaFirmas {
+    width:100%;
+    background-color:lightblue;
+    text-align:center;
+}
+#divPrincipalFirmas {
+  margin:auto;
+  margin:0 auto; /*centra el contenedor principal*/
+  width:1150px;
+  height:500px;
+ }
+#tablaPrincipalFirmas  {
+    width:100%;
+    border-radius: 10px 10px 10px 10px;
+    /*background-color:ActiveCaption;*/
+}
+#tablaPrincipalFirmas td:first-child {
+width: 49%;
+    margin-bottom:0;
+    vertical-align:super;
+ }
+#tablaPrincipalFirmas td:nth-child(2) {
+	width: 49%;
+    
+}
+/*de esta forma para el ancho de columnas segun el numero de columna*/
+/*tablaPrincipalFirmas td:nth-child(2) {
+	width: 100px;
+}*/
+
+#tablaIzquierdaFirmas {
+    text-align:left;
+    width:99%;
+    background-color:orange;
+    border-radius: 10px 10px 0px 0px;
+    border-bottom-style:double;
+    border-width: 5px;
+   
+    border-color:orange;
+    height:240px;
+    
+}
+#tablaIzquierdaFirmas td:first-child{
+    width:55%;
+    
+}
+#tablaFirmasMuestraDatos {
+    background-color:ActiveBorder;
+    border-radius: 10px 10px 10px 10px;
+}
+#tablaFirmasChecBox {
+      background-color:antiquewhite;
+      border-radius: 10px 10px 10px 10px;
+      height:100%;
+     font-size: 12px;
+}
+
+#divfirmaDuplicada {
+    width:610px;
+height:55px;
+ /*margin:0 auto;*/ /*centra el contenedor principal*/
+ border-radius: 10px 10px 10px 10px;
+background-color:orange;
+
+}
+
+/*#GridViewDuplicados {
+   background-color:aqua;
+}*/
+#divFirmaDerecha {
+ width:100%;
+ height:480px;
+overflow:auto;
+}
+#tablaVerConsultas{
+    width:100%;
+}
+#tablaVerConsultas td:first-child{
+    width:100px;
+    text-align:right;
+}
+/*#tablaVerConsultas td:nth-child(1){
+    width:90px;
+    text-align:left;
+     
+}*/
+#tablaVerConsultas td:nth-child(2){
+    width:140px;
+    text-align:left;
+     
+}
+#tablaVerConsultas td:nth-child(3){
+    width:100px;
+    text-align:left;
+}
+#tablaVerConsultas td:nth-child(4){
+    /*width:25%;*/
+    text-align:left;
+}
+
+
+/*Tabla de porcentajes*/
+#divInferiorPorcentajes {
+  width:100%;
+height:100px;
+border-radius: 10px 10px 10px 10px;
+
+}
+#TablaPorcentageFirmas {
+    width:100%;
+border-radius: 10px 10px 10px 10px;
+background-color:gainsboro;
+}
+#TablaPorcentageFirmas  td:nth-child(1) {
+    width:140px;
+}
+#TablaPorcentageFirmas  td:nth-child(2) {
+    width:80px;
+}
+#TablaPorcentageFirmas  td:nth-child(3) {
+    width:80px;
+}
+#TablaPorcentageFirmas  td:nth-child(4) {
+    width:120px;
+}
+#TablaPorcentageFirmas  td:nth-child(5) {
+    width:80px;
+}
+#TablaPorcentageFirmas  td:nth-child(6) {
+    width:80px;
+}
+
+#table2EnNoticia {
+width:450px;
+border-radius: 10px 10px 10px 10px;
+border:double;
+background-color:ActiveBorder;
+}
+#table1EnNoticia {
+width:100%;
+border-radius: 10px 10px 10px 10px;
+border:double;
+  
+/*background-color:ActiveBorder;*/
+}
+
+#PanelNoticiaNoticias {
+    width:99%;
+}
+#rangoBusqueda {
+width:98%;
+border-radius: 10px 10px 10px 10px;
+border:double;
+background-color:ActiveBorder;
+}
+#tablaBusqueda2 {
+width:98%;
+border-radius: 10px 10px 10px 10px;
+border:double;
+background-color:ActiveBorder;
+}
+#divlogin{
+	width:700px;
+   margin:0 auto; /*centra el div*/
+border-radius: 10px 10px 10px 10px;
+border:double;
+background-color:ActiveBorder;
+}
+
+
+#outerdiv
+{
+width:600px;
+height:150px;
+overflow:hidden;
+/*position:absolute;*/
+top:650px;
+left: -5px;
+        }
+#inneriframe
+{top:410px;
+    height:250px;
+position:absolute;
+width:615px;
+left:15px;
+overflow:hidden;
+clip:rect(120px 600px 232px 16px)/*recorta por la parte superior, recorta por la derecha, recorta altura inferior, recorta por la izqueirda */
+
+}
+
+/*prueba menu boton imagen*/
+.menu{
+    width:350px;
+    height:41px;
+    /*position:relative;*/
+    float:right;
+    top:15px;
+    right:10px;
+    font-family: "Trebuchet MS", sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: bold;
+    text-transform: uppercase;
+    
+}
+.item{
+/*icono de cambio de contraseña*/
+    position:relative;
+    background-color:#f0f0f0;
+    float:right;
+    width:40px;
+    margin:0px 5px;
+    height:40px;
+    border:2px solid #ddd;
+    -moz-border-radius:30px;
+    -webkit-border-radius:30px;
+    border-radius:30px;
+    -moz-box-shadow:1px 1px 3px #555;
+    -webkit-box-shadow:1px 1px 3px #555;
+    box-shadow:1px 1px 3px #555;
+    cursor:pointer;
+    overflow:hidden;
+}
+.link{
+    left:2px;
+    top:2px;
+    position:absolute;
+    width:48px;
+    height:48px;
+}
+.icon_mail{
+    background:transparent url(/img/sesion60x62.jpg) no-repeat top left;
+}
+.icon_help{
+    background:transparent url(/img/help.png) no-repeat top left;
+}
+.item_content{
+    position:absolute;
+    height:52px;
+    width:220px;
+    overflow:hidden;
+    left:56px;
+    top:7px;
+    background:transparent;
+    display:none;
+}
+.item_content h2{
+    color:#aaa;
+    text-shadow: 1px 1px 1px #fff;
+    background-color:transparent;
+    font-size:14px;
+}
+.item_content a{
+    background-color:transparent;
+    float:left;
+    margin-right:7px;
+    margin-top:3px;
+    color:#bbb;
+    text-shadow: 1px 1px 1px #fff;
+    text-decoration:none;
+    font-size:12px;
+}
+.item_content a:hover{
+    color:#0b965b;
+}
+.item_content p {
+    background-color:transparent;
+    display:none;
+}
+.item_content p input{
+    border:1px solid #ccc;
+    padding:1px;
+    width:155px;
+    float:left;
+    margin-right:5px;
+}
+
+/*ajax calender*/
+.AjaxCalendar .ajax__calendar_container 
+{
+	border:1px solid #646464;
+    background-color: orange;
+    color: red;
+}
+
+.AjaxCalendar .ajax__calendar_other .ajax__calendar_day,
+.AjaxCalendar .ajax__calendar_other .ajax__calendar_year 
+{
+	color: Black;
+}
+
+.AjaxCalendar .ajax__calendar_hover .ajax__calendar_day,
+.AjaxCalendar .ajax__calendar_hover .ajax__calendar_month,
+.AjaxCalendar .ajax__calendar_hover .ajax__calendar_year 
+{
+	color:  White;
+}
+
+.AjaxCalendar .ajax__calendar_active .ajax__calendar_day,
+.AjaxCalendar .ajax__calendar_active .ajax__calendar_month,
+.AjaxCalendar .ajax__calendar_active .ajax__calendar_year 
+{
+	color: Purple;
+	font-weight:bold;
+}
+/*ventana Modal*/
+           .ModalPopupBG
+{
+	background-color: #666699;
+	filter: alpha(opacity=50);
+	opacity: 0.7;
+}
+#Panel1 {
+width:450px
+}
+.Iframe1 {
+    width:452px
+}
+
+/*Imagen Girando*/
+
+.nubes, .mapa {
+position:absolute;
+top:0;
+right:0;
+bottom:0;
+left:0;
+margin:auto;
+
+}
+.nubes {
+width:220px;/*ubicacion de la imagen*/
+height:220px;
+}
+    .nubes img {
+    position: relative;
+    width:80px;
+height:70px;
+    z-index:10;/*velocidad de jiro*/
+    }
+.mapa {
+    width: 440px;
+    height: 100px;
+    background: lightblue;
+    border-radius: 50%;
+    box-shadow: -30px -20px 0 0 rgba(0,0,0,.1) inset -70px -30px 0 0 rgba(0,0,0,.1) inset 5px 5px 0 0 rgba(255,255,255,.2) inset;
+    /*background: url(/Img/LogoRevocatoria.jpg);*/
+    background-image: url(/Img/NombreXerox.gif) ;
+   
+    background-size: cover;
+    -webkit-animation: tierra-girando 8s infinite linear;
+}
+
+@-webkit-keyframes tierra-girando {
+from{background-position: left  center;}
+    to {
+        background-position: -640px center;
+    }
+}
+
+/*carrusel de imagenes*/
+
+.content-all{
+    width: 95px;
+    margin: auto;
+    perspective: 800px;
+    position: relative;
+    margin-top: 150px;
+}
+
+.content-carrousel{
+    width: 100%;
+    position: absolute;
+    animation: rotar 15s infinite linear;
+    transform-style: preserve-3d;
+}
+
+.content-carrousel:hover{
+    animation-play-state: paused;
+    cursor: pointer;
+}
+
+
+.content-carrousel figure{
+    width: 100%;
+    height: 54px;
+    overflow: hidden;
+    position: absolute;
+    box-shadow: 0px 0px 20px 0px black;
+    transition: all 300ms;
+    
+}
+
+.content-carrousel figure:hover{
+    box-shadow: 0px 0px 0px 0px black;
+    transition: all 300ms;
+}
+
+.content-carrousel figure:nth-child(2){transform: rotateY(36deg)  translateZ(150px);}
+.content-carrousel figure:nth-child(3){transform: rotateY(72deg)  translateZ(150px);}
+.content-carrousel figure:nth-child(4){transform: rotateY(108deg) translateZ(150px);}
+.content-carrousel figure:nth-child(1){transform: rotateY(0deg)   translateZ(150px);}
+.content-carrousel figure:nth-child(5){transform: rotateY(144deg) translateZ(150px);}
+.content-carrousel figure:nth-child(6){transform: rotateY(180deg) translateZ(150px);}
+.content-carrousel figure:nth-child(7){transform: rotateY(216deg) translateZ(150px);}
+.content-carrousel figure:nth-child(8){transform: rotateY(252deg) translateZ(150px);}
+.content-carrousel figure:nth-child(9){transform: rotateY(288deg) translateZ(150px);}
+.content-carrousel figure:nth-child(10){transform: rotateY(324deg)translateZ(150px);}
+
+.content-carrousel img{
+    width: 100%;
+    transition: all 300ms;
+}
+
+.content-carrousel img:hover{
+    transform: scale(1.2);
+    transition: all 300ms;
+}
+
+
+@keyframes rotar{
+    from{
+        transform: rotateY(0deg);
+    }to{
+        transform: rotateY(360deg);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+

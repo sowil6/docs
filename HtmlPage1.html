@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<script>
+function mostrarseleccion(){
+var input = document.getElementById('fr').contentWindow.document;
+        if(typeof document.getElementById('fr').contentWindow.document.selection != 'undefined' && document.getElementById('fr').contentWindow.document.selection) {
+            alert(input.selection.createRange().text);
+            return;
+        }
+        else {
+            alert(document.getElementById('fr').contentWindow.getSelection());
+            return;
+        }
+
+}
+</script>
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+
+<body>
+    <div id="bot" onmousedown="mostrarseleccion()">mostrar selecci&oacute;n</div><br />
+    <iframe id="fr" name="fr" src="https://www.procuraduria.gov.co/CertWEB/Certificado.aspx?tpo=1" width="500" height="500"></iframe>
+</body>
+</html>

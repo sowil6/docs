@@ -1,0 +1,310 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="cartagenafirmas.SiteMaster" %>
+<!DOCTYPE html>
+
+<%--<html xmlns="http://www.w3.org/1999/xhtml">--%>
+    <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head runat="server">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+       <script src="/Scripts/jquery.min.js" type="text/javascript"></script>
+        <script src="/Scripts/jquery-css-transform.js" type="text/javascript"></script>
+        <script src="/Scripts/jquery-animate-css-rotate-scale.js" type="text/javascript"></script>
+      <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+       
+
+   <script type="text/javascript">
+       //esto es para manejar la resoluciones de pantalla
+       if (screen.width = 640) {
+           document.writeln('<body style="ZOOM: 50%">');
+       }
+       else if (screen.width = 800) {
+           document.writeln('<body style="ZOOM: 63%">');
+
+       }
+       else if (screen.width = 1024) {
+           document.writeln('<body style="ZOOM: 80%">');
+       }
+       else if (screen.width >= 1280) {
+           document.writeln('<body style="ZOOM: 100%">');
+       }
+
+             function Confirm() {
+                 var confirm_value = document.createElement("INPUT");
+                 confirm_value.type = "hidden";
+                 confirm_value.name = "confirm_value";
+                 if (confirm("Desea elimnar el registro?")) {
+                     confirm_value.value = "Yes";
+                 } else {
+                     confirm_value.value = "No";
+                 }
+                 document.forms[0].appendChild(confirm_value);
+
+             }
+
+             //////////////////////////////////////// FUNCIONARIO
+             function OnItemSelectedFuncionario(event) {
+                 var selInd = $find("AutoCompleteExFuncionario")._selectIndex;
+                 if (selInd != -1) {
+                     $find("AutoCompleteExFuncionario").get_element().value = $find("AutoCompleteExFuncionario").get_completionList().childNodes[selInd]._value;
+                 }
+
+             }
+
+             function OnClientPopulatedFuncionario(sender, eventArgs) {
+                 //Find the autocompleteextender list
+                 var autoList = $find("AutoCompleteExFuncionario").get_completionList();
+                 for (i = 0; i < autoList.childNodes.length; i++) {
+                     // Consider value as image path
+                     var text2 = autoList.childNodes[i]._value;
+                     //First node will have the text
+
+                     var text = autoList.childNodes[i].firstChild.nodeValue;
+
+                     autoList.childNodes[i]._value = text;
+                     //Height and Width of the mage can be customized here...
+                     autoList.childNodes[i].innerHTML = text2 + "  " + text;
+
+                 }
+
+             }
+
+          </script>
+
+ </asp:ContentPlaceHolder>
+    <style type="text/css">
+        
+    </style>
+    </head>
+<body>
+    <form id="form1" runat="server">
+<%--          <style>
+            *{
+                margin:0;
+                padding:0;
+                /*background:#f9f9f9;*/
+            }
+            .title{
+                width:703px;
+                height:144px;
+                position:absolute;
+                top:0px;
+                left:0px;
+                background:transparent url(title.png) no-repeat top left;
+            }
+            a.back{
+                background:transparent url(back.png) no-repeat top left;
+                position:fixed;
+                width:150px;
+                height:27px;
+                outline:none;
+                bottom:0px;
+                left:0px;
+            }
+        </style>--%>
+       
+    <section id="cuerpoprincipal">
+        <header>
+              <div class="menu">
+            <div class="item">
+                <a class="link icon_mail"></a>
+                <div class="item_content">
+                    <h2>Sesion</h2>
+                    <p>
+                        <a href="/adminpage/cerrar.aspx">Salir</a>
+                        <a href="/AdminPage/CambiarContraseña.aspx">Cambiar Contraseña</a>
+                            <a href="/AdminPage/login2.aspx">Login</a>
+                       </p>
+                </div>
+            </div>
+<%--            <div class="item">
+                <a class="link icon_help"></a>
+                <div class="item_content">
+                    <h2>Ayuda</h2>
+                    <p>
+                        <a href="login2.aspx">Login</a>
+                        <a href="#">Live Support</a>
+                        <a href="#">Tickets</a>
+                    </p>
+                </div>
+            </div>--%>
+            
+        </div>
+
+            <div id="titulo">
+                <span class="SpanTitulo1">Sobeida</span><span class="SpanTitulo2"> Julio Gonzalez</span><br />
+                <span class="SpanSubtitulo1">Camara de Representantes 2018 - 2022</span><br />
+                <span class="SpanSubtitulo2">Con Manos limpias Revocaremos la Corrupcion</span>
+<%--                <img src="/AdminPage/NombreLogo.gif" alt="logo2" />--%>
+            </div>                  
+
+            <div id="loginDisplay">
+                <asp:HyperLink ID="Hiperlink" runat="server" NavigateUrl="/adminpage/login2.aspx">.</asp:HyperLink>
+            </div>
+            <div id="logotipo">
+                <a href="/Public/inicioPublico.aspx">
+                    <img src="/Img/fotoSobe3.gif" alt="logo" /></a>
+            </div>
+             <div class="nubes">
+        
+        <%--<img src="/Img/camaras.gif" alt="nubes">--%>
+  <div class="mapa"></div>
+       
+
+    </div>
+
+
+            <div id="barraHorizontal" >
+                <ul>
+                    <li><a href="/Public/Presentacion.aspx">Presentacion</a></li>
+                    <li><a href="/Public/inicioPublico.aspx">Inicio</a></li>
+                    <li><a href="/Public/informativo.aspx">Informativo</a> </li>
+                    <li><a href="/Public/Logistica.aspx">Logistica</a> </li>
+                    
+
+                </ul>
+                 <ul id="menuDigitador" runat="server">
+                    <li><a href="/GetFirmas/GetFirma.aspx">Firmas</a></li>
+                   
+                </ul>
+                <ul id="menuComite" runat="server">
+               
+                    <li><a href="/Comite/ConfiguraNoticia.aspx">Noticias</a> </li>
+                    <li><a href="/Reportes/ReportePersonas.aspx">Reportes</a> </li>
+
+                </ul>
+                 <ul id="menuAdmin" runat="server">
+                    <li><a href="/AdminPage/TraerDeRegistraduria.aspx">Base Datos</a> </li>
+                    <li><a href="/AdminPage/Registro.aspx">Registro</a> </li>
+                     <li><a href="/Public/WebFormPruebas.aspx">Pruebas</a> </li>
+                     
+                </ul>
+
+
+         <div id="logoutDisplay">
+                <asp:HyperLink ID="Hyperlink3" runat="server" NavigateUrl="/adminpage/cerrar.aspx" ForeColor="White">.</asp:HyperLink>
+            </div>
+
+            </div>
+        </header>
+       
+        <section id="bodybajo">
+            <section id="columIzq">
+                <asp:ContentPlaceHolder ID="ContenidoMenuContextual" runat="server" >
+<%--                    <div id="notaRapida" >
+                        <p>
+                            Por fin ya puede encontrar variedad de Soluciones en un solo sitio:</p>
+                        <asp:Repeater ID="Repeater1" runat="server">
+                            <ItemTemplate>
+                                <table style="width: 98%; text-align: left; margin-left: 10px; margin-right: 150px">
+                                    <tr>
+                                        <td>
+                                            <h3><%#Eval("tituloNoticia") %></h3>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <center>
+                                                <a href="/Public/Logistica.aspx">
+                                                <img src="<%#Eval("fotoNoticia") %>" width="150" height="100"/>
+                                                </a>
+                                            </center>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><%#Eval("mensajeNoticia") %></td>
+                                    </tr>
+                                </table>
+                            </ItemTemplate>
+                        </asp:Repeater>
+                    </div>--%>
+                </asp:ContentPlaceHolder>
+            </section>
+          
+            <section id="MasterColumCentro">
+                <asp:ContentPlaceHolder ID="MainContent1" runat="server">
+                   
+                </asp:ContentPlaceHolder>
+            </section>
+
+            <section id="MasterColumDerecha">
+                
+                <asp:ContentPlaceHolder ID="ContentSecundario" runat="server">
+               <%--     <div id="MasterSubDivContenidoSecundario">--%>
+                        <asp:Repeater ID="MasterRepeater2" runat="server">
+                            <ItemTemplate>
+                                <table id="TablaMastertablaRepeater">
+                                    <tr>
+                                        <td>
+                                            <h3><%#Eval("tituloNoticia") %></h3>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="<%#Eval("urlPaginaNoticia") %>">
+                                            <img src="<%#Eval("fotoNoticia") %>" width="150" height="100"/>
+                                            </a>
+                                            </center>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><p id="textoColumnaDerecha"> <%#Eval("mensajeNoticia") %></p></td>
+                                    </tr>
+                                </table>
+                            </ItemTemplate>
+                    </asp:Repeater>
+                 <%--   </div>--%>
+
+                </asp:ContentPlaceHolder>
+            </section>
+
+        </section> 
+            
+            </section> 
+           
+                 <script>
+        $('.item').hover(
+            function () {
+                var $this = $(this);
+                expand($this);
+            },
+            function () {
+                var $this = $(this);
+                collapse($this);
+            }
+        );
+        function expand($elem) {
+            var angle = 0;
+            var t = setInterval(function () {
+                if (angle == 1440) {
+                    clearInterval(t);
+                    return;
+                }
+                angle += 40;
+                $('.link', $elem).stop().animate({ rotate: '+=-40deg' }, 0);
+            }, 10);
+            $elem.stop().animate({ width: '268px' }, 1000)
+            .find('.item_content').fadeIn(400, function () {
+                $(this).find('p').stop(true, true).fadeIn(600);
+            });
+        }
+        function collapse($elem) {
+            var angle = 1440;
+            var t = setInterval(function () {
+                if (angle == 0) {
+                    clearInterval(t);
+                    return;
+                }
+                angle -= 40;
+                $('.link', $elem).stop().animate({ rotate: '+=40deg' }, 0);
+            }, 10);
+            $elem.stop().animate({ width: '52px' }, 1000)
+            .find('.item_content').stop(true, true).fadeOut().find('p').stop(true, true).fadeOut();
+        }
+    </script>
+
+    </form>  
+
+</body>
+</html>
